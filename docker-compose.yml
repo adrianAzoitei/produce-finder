@@ -3,6 +3,7 @@ version: '3.9'
 services:
 
   db:
+    container_name: postgres
     image: postgres
     restart: always
     # set shared memory limit when using docker-compose
@@ -11,3 +12,11 @@ services:
       - 5432:5432
     environment:
       POSTGRES_PASSWORD: 123456
+    volumes:
+      - db_home:/var/lib/postgresql/data
+      - ./backend/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+
+
+volumes:
+  db_home:
+    external: false
