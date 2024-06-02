@@ -13,6 +13,8 @@ For now the architecture is kept simple:
 3. PostgreSQL database.
 ![architectural diagram](docs/archi.png)
 
+> :warning: **Object detection models:**: At the moment, only the YOLOv8 and YOLOv9 model architectures are supported. More coming soon.
+
 ## Deployment
 The application is meant to be deployed with:
 1. [Docker compose](/docker-compose.yml) for development / testing.
@@ -23,6 +25,8 @@ The application is meant to be deployed with:
 
 # TODO
 - [ ] Add auth (OAuth2 w/ Keycloak)
+- [ ] Add `upload model` (weights) feature.
+- [ ] Add `select model` feature.
 - [ ] Write Helm Chart
 - [ ] Create K8s namespace
 - [ ] Create K8s imagePullSecret
