@@ -32,8 +32,8 @@
         </div>
 
         <span v-if="res" class="text-green-600 font-medium">Results:</span>
-        <div class="mt-4 flex flex-col items-center justify-center space-y-4">
-            <canvas ref="canvasEl"/>
+        <div class="mt-4 w-full flex flex-col items-center justify-center space-y-4">
+            <canvas class="max-w-[50%]" ref="canvasEl"/>
         </div>
 
         <span v-if="error" class="text-red-600 font-medium">{{ error }}</span>
