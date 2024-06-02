@@ -3,7 +3,7 @@ version: '3.9'
 services:
 
   db:
-    container_name: postgres
+    container_name: db
     image: postgres
     restart: always
     # set shared memory limit when using docker-compose
@@ -15,7 +15,22 @@ services:
     volumes:
       - db_home:/var/lib/postgresql/data
       - ./backend/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
-
+    
+  backend:
+    depends_on:
+      - db
+    container_name: backend
+    build: backend/
+    ports:
+      - 8081:8000
+    environment:
+      DB_NAME: 'backend'
+      DB_HOST: 'db'
+      DB_PORT: 5432
+      DB_USERNAME: 'backend'
+      DB_PASSWORD: '123456'
+    volumes:
+      - ./backend/server/detection/models:/app/server/detection/models
 
 volumes:
   db_home:
