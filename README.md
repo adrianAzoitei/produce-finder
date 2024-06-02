@@ -22,6 +22,7 @@ The application is meant to be deployed with:
 ![cicd](docs/cicd.png)
 
 # TODO
+- [ ] Add auth (OAuth2 w/ Keycloak)
 - [ ] Write Helm Chart
 - [ ] Create K8s namespace
 - [ ] Create K8s imagePullSecret
