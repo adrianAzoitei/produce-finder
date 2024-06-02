@@ -13,7 +13,7 @@ For now the architecture is kept simple:
 3. PostgreSQL database.
 ![architectural diagram](docs/archi.png)
 
-> :warning: **Object detection models:**: At the moment, only the YOLOv8 and YOLOv9 model architectures are supported. More coming soon.
+> :warning: **Object detection models**: At the moment, only the [YOLO family](https://github.com/ultralytics/ultralytics) of models is supported. More coming soon.
 
 ## Deployment
 The application is meant to be deployed with:
