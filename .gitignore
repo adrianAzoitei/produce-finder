@@ -193,5 +193,8 @@ logs
 .env.*
 !.env.example
 
+# model weights
+**/*.pt
+
 # personal stuff
 .envrc

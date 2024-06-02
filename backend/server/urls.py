@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
     # TODO: add uid path parameter
-    path("detect", views.detect, name="detect"),
+    path("detect/<uuid:user_id>/", views.detect, name="detect"),
 ]
