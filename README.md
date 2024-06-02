@@ -31,6 +31,7 @@ The application is meant to be deployed with:
 - [ ] Create K8s namespace
 - [ ] Create K8s imagePullSecret
 - [ ] Expose with Azure Application Gateway
+- [ ] Train models on [SKU110k](https://paperswithcode.com/dataset/sku110k)
 - [ ] Write Ansible Playbook to:
     - [ ] Deploy Azure Container Registry
     - [ ] Create Service Principal
