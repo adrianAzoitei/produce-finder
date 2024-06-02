@@ -32,6 +32,16 @@ services:
     volumes:
       - ./backend/server/detection/models:/app/server/detection/models
 
+  frontend:
+    depends_on:
+      - backend
+    container_name: frontend
+    build: frontend/
+    ports:
+      - 3000:3000
+    environment:
+      NUXT_PUBLIC_BACKEND_HOST: 'http://localhost:8081'
+
 volumes:
   db_home:
     external: false
