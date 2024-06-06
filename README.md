@@ -49,7 +49,7 @@ The application is meant to be deployed with:
     - [ ] Install Helm chart
 
 ## Training
-- [ ] Train models ()
+- [ ] Train models ([Azure ML ?](https://docs.ultralytics.com/guides/azureml-quickstart/#what-is-azure-machine-learning-azureml))
     - [ ] [SKU110k](https://paperswithcode.com/dataset/sku110k) ?
     - [ ] [Grocery Store Dataset](https://github.com/marcusklasson/GroceryStoreDataset) ?
     - [ ] Custom dataset (needs labelling) ?
