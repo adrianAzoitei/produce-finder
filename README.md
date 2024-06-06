@@ -1,4 +1,4 @@
-# Produce Finder - a project using Vue.js, Django, Azure, Ansible, Docker and Kubernetes
+# Produce Finder
 This is a simple application that, upon uploading an image with groceries, will:
 1. Store the detected items in a database, adding up quantities of the same item.
 2. Update external systems (e.g. an Excel sheet, Notion board etc.).
@@ -24,20 +24,35 @@ The application is meant to be deployed with:
 ![cicd](docs/cicd.png)
 
 # TODO
-- [ ] Add auth (OAuth2 w/ Keycloak)
+## Security
+- [ ] Add auth (OAuth2 w/ Keycloak).
+
+## Features
+- [ ] Show table with individual items (crops using bboxes) and detected class (FE).
+- [ ] Store uploaded images in Blob Storage w/ UUID (add this ID to the detection row) (BE).
+- [ ] Allow drawing bbox, choosing a class and sending the classification to BE for later retraining. See COCO format.
 - [ ] Add `upload model` (weights) feature.
 - [ ] Add `select model` feature.
+- [ ] Integrate with Google Sheets (inventory)
+- [ ] Integrate with Notion (inventory)
+
+## Deployment
 - [ ] Write Helm Chart
 - [ ] Create K8s namespace
 - [ ] Create K8s imagePullSecret
 - [ ] Expose with Azure Application Gateway
-- [ ] Train models on [SKU110k](https://paperswithcode.com/dataset/sku110k)
 - [ ] Write Ansible Playbook to:
     - [ ] Deploy Azure Container Registry
     - [ ] Create Service Principal
     - [ ] Deploy Azure Kubernetes Service
     - [ ] Prepare K8s namespace
     - [ ] Install Helm chart
+
+## Training
+- [ ] Train models ()
+    - [ ] [SKU110k](https://paperswithcode.com/dataset/sku110k) ?
+    - [ ] [Grocery Store Dataset](https://github.com/marcusklasson/GroceryStoreDataset) ?
+    - [ ] Custom dataset (needs labelling) ?
+
+## Observavility
 - [ ] Trace requests w/ OpenTelemetry
-- [ ] Integrate with Google Sheets (inventory)
-- [ ] Integrate with Notion (inventory)
